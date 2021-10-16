@@ -152,3 +152,5 @@ Bass Define L1 1 2+4 1 90
 **\<duration\>**  `1` `2` `4` `8` `16` combined `4+8` equals `4.`\
 **\<offset\>** is an integer giving the offset from the root note, root note `1` third `3` fifth `5` fifth. Octave modifiiers: one octave down `5-` fifth one octave up `5+`  \
 **\<volume\>** MIDI standard volume `80`
+
+more to come ...
