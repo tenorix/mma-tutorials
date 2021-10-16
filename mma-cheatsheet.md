@@ -18,7 +18,7 @@ Muting
 
 Bar by Bar Chord Notation
 ----
-One line per bar, one chord per beat. Use `/` or `-` to repeat the chord for a beat. Comments start with `//`
+One line per bar, one chord per beat. Use `/` or `-` to repeat the chord for a beat. Comments start with `//`\
 see [MMA reference manual](https://www.mellowood.ca/mma/online-docs/html/ref/node8.html)
 
 **Chord notation without bar numbers** (example)
