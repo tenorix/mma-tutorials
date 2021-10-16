@@ -1,2 +1,2 @@
 # mma-tutorials
-Cheatsheets and tuturials for MMA
+Cheatsheets and tutorials for MMA
