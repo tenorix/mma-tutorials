@@ -4,7 +4,7 @@ MMA Cheatsheet
 Initial Groove and Tempo
 ----
 
-**Groove** Select a defined groove from the library, e.g. `Groove Ballad`. Several variants of a particular style are defined in each .mma library file in the /lib subdirectories. See *[MMA library docs](https://www.mellowood.ca/mma/online-docs/html/lib/index.html).*
+Select a defined **Groove** from the library, e.g. `Groove Ballad`. Several variants of a particular style are defined in each .mma library file in the /lib subdirectories. See *[MMA library docs](https://www.mellowood.ca/mma/online-docs/html/lib/index.html).*
 
 **Tempo** `Tempo <bpm>` beats per minute
 
@@ -88,12 +88,13 @@ results in part 1 - part 2 - part 1 - end.
 Truncate
 ----
 
-**Truncate** following bar to 2 beats ˋTruncate 2ˋ
+**Truncate** following bar to 2 beats `Truncate 2`
 
 Tempo Change
 ----
 
-Change tempo to 100 bpm over next 2 bars ˋTempo 100 2ˋ slow down by 20 beats over next 2 bars ˋTempo -20 2ˋ
+Change tempo to 100 bpm over next 2 bars `Tempo 100 2` slow down by 20 beats over next 2 bars `Tempo -20 2`
+
 
 
 …
