@@ -1,7 +1,7 @@
 MMA Cheatsheet
 ----
 
-This cheatsheet presents a useful, but only small subset of the keywords and functionality of  **MMA - Musical MIDI Accompaniment** - a powerful MIDI accompaniment generator. Much more in the [MMA online documentation](https://www.mellowood.ca/mma/online-docs/html/mma.html). MMA is created and maintained at https://www.mellowood.ca/mma/ by Bob van der Poel.
+This cheatsheet presents a useful, but only small subset of the keywords and functionality of  **MMA - Musical MIDI Accompaniment** - a powerful MIDI accompaniment generator. Much more in the [MMA online documentation](https://www.mellowood.ca/mma/online-docs/html/mma.html). MMA is created and maintained at [www.mellowood.ca/mma/](https://www.mellowood.ca/mma/) by Bob van der Poel.
 
 Initial Groove, Tempo and Volume
 ----
