@@ -110,7 +110,12 @@ Volume indications `pp` `p` `mp` `m` `mf` `f` `ff`
 ---
 # Defining your own grooves
 
-Grooves are defined in X steps. ...
+A **groove** consists of a number of tracks played in parallel. A **track** is a single voice (e.g. AcousticBass) playing a pattern, like a musician. A **pattern** is a definition for a voice which describes what rhythm to play during the current bar. The actual notes selected for the rhythm are determined by the song bar data in the bar by bar chord notation. A groove is defined in the following way 
+- specify the patterns 
+- define a number of tracks (with the `sequence` statement) based on that patterns
+- 'freeze' the currently define tracks into a groove with the `GrooveDef` statement.
+
+MMA has different track types that model what a musician is doing in a band. Only drum, chord and bass are currently described in this cheat sheet. Each track type has its own way of specification. Other MMA track types are walk, plectrum, arpeggio, scale, solo and melody, automatic melodies, see [MMA Reference Manual](https://www.mellowood.ca/mma/online-docs/html/ref/node3.html).
 
 ## Time Signature
 ```
@@ -147,7 +152,7 @@ Bass Define L1 1 2+4 1 90
 **\<pattern name\>** whatever name you choose
 **\<position\>** `1` `1.5` `2` `2.5` `3` `3.5` `4` `4.5`\
 **\<duration\>**  `1` `2` `4` `8` `16` combined `4+8` equals `4.`\
-**\<offset\>** is an integer giving the offset from the root note, root note `1` third `3` fifth `5` fifth. Octave modifiiers: one octave down `5-` fifth one octave up `5+`  \
+**\<offset\>** is an integer giving the offset from the root note, root note `1` third `3` fifth `5` fifth. Octave modifiers: one octave down `5-` one octave up `5+`  \
 **\<volume\>** MIDI standard volume `80`
 
 **Bass Sequence**
@@ -161,9 +166,12 @@ End
 
 Sequences: https://www.mellowood.ca/mma/online-docs/html/ref/node5.html#SECTION00510000000000000000
 
-### asf
+### Defining a Groove
 ```
+DefGroove myGroove
 ```
+`DefGroove` defines a groove by freezing the currently defined sequences in the section *above*, starting from the `SeqClear` to `DefGroove`.  
+See [MMA Reference Manual](https://www.mellowood.ca/mma/online-docs/html/ref/node6.html)
 
 
 ### Accent
