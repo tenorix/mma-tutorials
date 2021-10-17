@@ -1,7 +1,7 @@
-# MMA Cheatsheet (Draft, to be verified)
+# MMA Cheatsheet
 
 
-This cheatsheet presents a useful subset of the keywords and functionality of  **MMA - Musical MIDI Accompaniment**. MMA is a powerful MIDI accompaniment generator with lots of functionality giving you total control of the generated backing track, so be sure to refer to the [MMA online documentation](https://www.mellowood.ca/mma/online-docs/html/mma.html). MMA is created and maintained at [www.mellowood.ca/mma/](https://www.mellowood.ca/mma/) by Bob van der Poel.
+This cheatsheet presents a useful subset of the keywords and functionality of  **MMA - Musical MIDI Accompaniment**. MMA is a powerful MIDI accompaniment generator with lots of functionality giving you total control of the generated backing track, so be sure to refer to the [MMA online documentation](https://www.mellowood.ca/mma/online-docs/html/mma.html). MMA is created and maintained at [www.mellowood.ca/mma/](https://www.mellowood.ca/mma/) by Bob van der Poel. *Note: Playing MIDI files on a computer with a cheap on-board sound card will probably result in bad sound quality and frustration - that is not an MMA problem.*
 
 # Writing a Backing Track in Bar by Bar Chord Notation
 
@@ -9,7 +9,7 @@ This cheatsheet presents a useful subset of the keywords and functionality of  *
 
 ```
 Groove Metronome4
-Tempo 70
+Tempo 80
 Volume mf
 ```
 
@@ -38,6 +38,14 @@ One line per bar, one chord per beat. Use `/` or `-` to repeat the chord for a b
 *[MMA reference manual](https://www.mellowood.ca/mma/online-docs/html/ref/node36.html#SECTION003610000000000000000)*
 
 ## Muting
+```
+z     // works without chord
+z!    // works without chord
+C/zD  // only with a chord 
+C/zB  // only with a chord 
+C/zC  // only with a chord 
+
+```
 **Mute** all tracks except drums `z` all tracks `z!` drum tracks `zD` bass tracks `zB` chord tracks `zC`\
 *[MMA reference manual](https://www.mellowood.ca/mma/online-docs/html/ref/node8.html#SECTION00840000000000000000)*
 
@@ -54,7 +62,7 @@ C Am / / * 2
 
 ## Solo/Melody
 
-*single notes example*
+### Single notes example
 ```
 F 	/ 	G 	/	{ 4a ; 16r ; 16c+ ; 16 d+ ; 16e+ ; 4.d+ ; 8c+ ; }
 ```
@@ -62,7 +70,7 @@ F 	/ 	G 	/	{ 4a ; 16r ; 16c+ ; 16 d+ ; 16e+ ; 4.d+ ; 8c+ ; }
 **Notes** `a` `a#` `a&` `b` `b#` `b&` `c` `c#` `c&` `d` `d#` `d&` `e` `e#` `e&` `f` `f#` `f&` `g` `g#` `g&` **Rest** `r` **Octave** up `+` or down `-` \
 *[MMA reference manual](https://www.mellowood.ca/mma/online-docs/html/ref/node10.html#chap-solo)*
 
-*multiple notes example*
+### Multiple notes example
 ```
 C5 	/ 	/ 	z	{ 8c+ g ; c ; 8c+ g ; c ; 8c+ g ; c ; }
 ```
@@ -147,7 +155,7 @@ Bass Define L1 1 2+4 1 90
 **\<pattern name\>** whatever name you choose \
 **\<position\>** `1` `1.5` `2` `2.5` `3` `3.5` `4` `4.5`\
 **\<duration\>**  `1` `2` `4` `8` `16` combined `4+8` equals `4.`\
-**\<offset\>** is an integer giving the offset from the root note, root note `1` third `3` fifth `5` fifth. Octave modifiers: one octave down `5-` one octave up `5+`  \
+**\<offset\>** is an integer giving the offset from the root note, root note `1` third `3` fifth `5`. Octave modifiers: one octave down `5-` one octave up `5+`  \
 **\<volume\>** MIDI standard volume `80`
 
 ## Chord Pattern
@@ -161,12 +169,30 @@ Chord Define C1 1 1 80 ; 2 1 60 ; 3 1 60 ; 4 1 60
 
 ## Tracks
 ```
-Drum-Kick            Sequence D1 Tone KickDrum1 
-Drum-Snare           Sequence S1 Tone SnareDrum1
-Drum-HH	             Sequence H1 Tone ClosedHiHat 
-Bass-Simple 	       Sequence B1 Voice AcousticBass
-Bass-LeftHandPiano   Sequence L1 Voice Piano1
-Chord-RightHandPiano Sequence C1 Voice Piano1
+Begin Drum-Kick
+   Sequence D1 
+   Tone KickDrum1 
+End
+Begin Drum-Snare  
+   Sequence S1 
+   Tone SnareDrum1
+End
+Begin Drum-HH
+   Sequence H1 
+   Tone ClosedHiHat 
+End
+Begin Bass-Simple
+	Sequence B1 
+	Voice AcousticBass
+End
+Begin Bass-LeftHandPiano 
+	Sequence L1 
+	Voice Piano1
+End
+Begin Chord-RightHandPiano 
+	Sequence C1
+	Voice Piano1
+End
 ```
 **Drum Tone**  e.g. `KickDrum1` `SnareDrum1` `ClosedHihat`  \
 **Bass Voice** e.g. `AcousticBass` `ContraBass` `FingeredBass` `FretlessBass` `PickedBass` `Piano1` \
