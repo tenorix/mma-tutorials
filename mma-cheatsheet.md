@@ -8,7 +8,7 @@ This cheatsheet presents a useful subset of the keywords and functionality of  *
 ## Initial Groove, Tempo and Volume
 
 ```
-Groove Metronome4
+Groove 8beat1
 Tempo 80
 Volume mf
 ```
