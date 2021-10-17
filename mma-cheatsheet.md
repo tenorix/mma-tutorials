@@ -131,7 +131,6 @@ Drum Define D1  1 4 90 ; 3 4 90
 Drum Define S1  3 4 90
 Drum Define CH1 1 4 90
 Drum Define H1  CH1 * 4
-End
 ```
 **Drum pattern format** per line `Drum Define <pattern name> <position> <duration> <volume> ; ... ; ...`.  \
 **\<pattern name\>** whatever name you choose \
@@ -165,7 +164,7 @@ Chord Define C1 1 1 80 ; 2 1 60 ; 3 1 60 ; 4 1 60
 Drum-Kick            Sequence D1 Tone KickDrum1 
 Drum-Snare           Sequence S1 Tone SnareDrum1
 Drum-HH	             Sequence H1 Tone ClosedHiHat 
-Bass-Simple 	     Sequence B1 Voice AcousticBass
+Bass-Simple 	       Sequence B1 Voice AcousticBass
 Bass-LeftHandPiano   Sequence L1 Voice Piano1
 Chord-RightHandPiano Sequence C1 Voice Piano1
 ```
