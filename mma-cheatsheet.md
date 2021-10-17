@@ -3,7 +3,9 @@ MMA Cheatsheet
 
 This cheatsheet presents a useful, but only small subset of the keywords and functionality of  **MMA - Musical MIDI Accompaniment** - a powerful MIDI accompaniment generator. Much more in the [MMA online documentation](https://www.mellowood.ca/mma/online-docs/html/mma.html). MMA is created and maintained at [www.mellowood.ca/mma/](https://www.mellowood.ca/mma/) by Bob van der Poel.
 
-Initial Groove, Tempo and Volume
+# Writing a Backing Track in Bar by Bar Chord Notation
+
+## Initial Groove, Tempo and Volume
 ----
 
 ```
@@ -16,21 +18,19 @@ Volume mf
 **Tempo** e.g. 70 bpm `Tempo 70` \
 **Volume**  e.g. `Volume mf` as in conventional score notation  `pp` `p` `mp` `m` `mf` `f` `ff`
 
-Bar by Bar Chord Notation
-----
-One line per bar, one chord per beat. Use `/` or `-` to repeat the chord for a beat. Comments start with `//`\
-*see [MMA reference manual](https://www.mellowood.ca/mma/online-docs/html/ref/node8.html)*
-
-**Chord notation without bar numbers** (example)
+## Chord notation without bar numbers
 ```
 C Am / /    // a comment
 F / G7 /
 ```
-**Chord notation with bar numbers** (example)
+## Chord notation with bar numbers
 ```
 1 C Am / /
 2 F / G7 /
 ```
+One line per bar, one chord per beat. Use `/` or `-` to repeat the chord for a beat. Comments start with `//`\
+*see [MMA reference manual](https://www.mellowood.ca/mma/online-docs/html/ref/node8.html)*
+
 Chords
 ----
 **Chord roots** `A` `A#` `Ab` `B` `B#` `Bb` `C` `C#` `Cb` `D` `D#` `Db` `E` `E#` `Eb` `F` `F#` `Fb` `G` `G#` `Gb` \
@@ -43,18 +43,18 @@ Muting
 **Mute** all tracks except drums `z` all tracks `z!` drum tracks `zD` bass tracks `zB` chord tracks `zC`\
 *see [MMA reference manual](https://www.mellowood.ca/mma/online-docs/html/ref/node8.html#SECTION00840000000000000000)*
 
-**Bar repeat** (example)
+## Bar repeat
 ```
 C Am / / * 2
 ```
-**Lyrics** (example)
+## Lyrics
+
 ```
 1 C Am / / [ohh I love]
 2 F / G7 / [you so]
 ```
 
-Solo/Melody
-----
+## Solo/Melody
 
 *single notes example*
 ```
@@ -69,9 +69,7 @@ F 	/ 	G 	/	{ 4a ; 16r ; 16c+ ; 16 d+ ; 16e+ ; 4.d+ ; 8c+ ; }
 C5 	/ 	/ 	z	{ 8c+ g ; c ; 8c+ g ; c ; 8c+ g ; c ; }
 ```
 
-Repeat
-----
-
+## Repeat
 
 **Simple repeat** (example)
 ```
@@ -93,13 +91,11 @@ C / / /     // end
 ```
 results in part 1 - part 2 - part 1 - end.
 
-Truncate
-----
+## Truncate
 
 **Truncate** following bar to 2 beats `Truncate 2`
 
-Tempo Change
-----
+## Tempo Change
 
 Change tempo to 100 bpm over next 2 bars `Tempo 100 2` \
 Slow down by 20 beats over next 2 bars `Tempo -20 2`
@@ -129,7 +125,7 @@ Time 4/4
 
 Types of patterns: `Bass` `Chord` `Drum` . For Arpeggio, Walk, Scale, Aria, Plectrum, Drum Tone see the [MMA reference manual](https://www.mellowood.ca/mma/online-docs/html/ref/node4.html#SECTION00410000000000000000).
 
-### Drum Patterns
+### Drum Pattern
 ```
 Begin Drum Define
 	D1 1 4 90
@@ -140,17 +136,47 @@ End
 ```
 x `<label> `
 
-### Bass Patterns
+### Bass Pattern
 
-**Bass pattern format** per line `Bass Define <pattern name> <position> <duration> <offset> <volume> ; ... ; ...`.  
 
 ```
 Bass Define B1 1 4+8 1 60 ; 2.5 8 1 50 ; 3 8 1 50 ; 3.5 4 1 50 ; 4.5 8 1 50
 Bass Define L1 1 2+4 1 90
 ```
+**Bass pattern format** per line `Bass Define <pattern name> <position> <duration> <offset> <volume> ; ... ; ...`.  \
+**\<pattern name\>** whatever name you choose
 **\<position\>** `1` `1.5` `2` `2.5` `3` `3.5` `4` `4.5`\
 **\<duration\>**  `1` `2` `4` `8` `16` combined `4+8` equals `4.`\
 **\<offset\>** is an integer giving the offset from the root note, root note `1` third `3` fifth `5` fifth. Octave modifiiers: one octave down `5-` fifth one octave up `5+`  \
 **\<volume\>** MIDI standard volume `80`
+
+**Bass Sequence**
+```
+Begin Bass-Simple
+	Sequence B1
+	Voice AcousticBass
+End
+```
+`Bass-` is predefined to denote a bass sequence. Voice e.g. `AcousticBass` `ContraBass` `FingeredBass` `FretlessBass` `PickedBass` `Piano1` from the list of predefined values for MIDI voices, see [MMA Reference Manual](https://www.mellowood.ca/mma/online-docs/html/ref/node36.html#SECTION003620000000000000000)
+
+Sequences: https://www.mellowood.ca/mma/online-docs/html/ref/node5.html#SECTION00510000000000000000
+
+### asf
+```
+```
+
+
+### Accent
+```
+Bass Define X1 1 4 1 100 ; 2.5 8 1 50 ; 3 8 1 50 ; 3.5 4 1 50 ; 4.5 8 1 50
+```
+is the same as
+```
+Bass Define X1 1 4 1 80 ; 2.5 8 1 80 ; 3 8 1 80 ; 3.5 4 1 80 ; 4.5 8 1 80
+Accent         1    +20 ; 2.5    -20 ; 3    -20 ; 3.4    -20 ; 4.5    -20
+```
+
+
+https://www.mellowood.ca/mma/online-docs/html/ref/node19.html#SECTION001910000000000000000
 
 more to come ...
