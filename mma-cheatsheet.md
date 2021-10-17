@@ -111,11 +111,11 @@ Volume indications `pp` `p` `mp` `m` `mf` `f` `ff`
 # Defining your own grooves
 
 A **groove** consists of a number of tracks played in parallel. A **track** is a single voice (e.g. AcousticBass) playing a pattern, like a musician. A **pattern** is a definition for a voice which describes what rhythm to play during the current bar. The actual notes selected for the rhythm are determined by the song bar data in the bar by bar chord notation. A groove is defined in the following way 
-- specify the patterns 
-- define a number of tracks (with the `sequence` statement) based on that patterns
+- specify the patterns* with `Drum Define`, `Bass Define` or `Chord Define`
+- define a number of tracks  based on those patterns with `Sequence`
 - 'freeze' the currently define tracks into a groove with the `GrooveDef` statement.
 
-MMA has different track types that model what a musician is doing in a band. Only drum, chord and bass are currently described in this cheat sheet. Each track type has its own way of specification. Other MMA track types are walk, plectrum, arpeggio, scale, solo and melody, automatic melodies, see [MMA Reference Manual](https://www.mellowood.ca/mma/online-docs/html/ref/node3.html).
+\*) MMA has different track types that model what a musician is doing in a band. Each track type has its own way of specification as a pattern. Only drum, chord and bass are currently described in this cheat sheet. Other MMA track types are walk, plectrum, arpeggio, scale, solo and melody, automatic melodies, see [MMA Reference Manual](https://www.mellowood.ca/mma/online-docs/html/ref/node3.html).
 
 ## Time Signature
 ```
@@ -125,12 +125,8 @@ Time 4/4
 ```
 **Time signature** `2/4` `3/4` `4/4` `6/8`
 
-## Patterns
 
-
-Types of patterns: `Bass` `Chord` `Drum` . For Arpeggio, Walk, Scale, Aria, Plectrum, Drum Tone see the [MMA reference manual](https://www.mellowood.ca/mma/online-docs/html/ref/node4.html#SECTION00410000000000000000).
-
-### Drum Pattern
+## Drum Pattern
 ```
 Begin Drum Define
 	D1 1 4 90
@@ -141,7 +137,7 @@ End
 ```
 x `<label> `
 
-### Bass Pattern
+## Bass Pattern
 
 
 ```
@@ -155,14 +151,17 @@ Bass Define L1 1 2+4 1 90
 **\<offset\>** is an integer giving the offset from the root note, root note `1` third `3` fifth `5` fifth. Octave modifiers: one octave down `5-` one octave up `5+`  \
 **\<volume\>** MIDI standard volume `80`
 
-**Bass Sequence**
+## Sequence
 ```
 Begin Bass-Simple
 	Sequence B1
 	Voice AcousticBass
 End
 ```
-`Bass-` is predefined to denote a bass sequence. Voice e.g. `AcousticBass` `ContraBass` `FingeredBass` `FretlessBass` `PickedBass` `Piano1` from the list of predefined values for MIDI voices, see [MMA Reference Manual](https://www.mellowood.ca/mma/online-docs/html/ref/node36.html#SECTION003620000000000000000)
+Bass Voice e.g. `AcousticBass` `ContraBass` `FingeredBass` `FretlessBass` `PickedBass` `Piano1` \ 
+Chord Voice e.g. `Piano1` `Piano2` `Piano3` `CleanGuitar` `NylonGuitar` `SteelGuitar`
+Drum Tone e.g. `KickDrum1` `SnareDrum1` `ClosedHihat`  \
+See the complete list of predefined values for MIDI voices, see [MMA Reference Manual](https://www.mellowood.ca/mma/online-docs/html/ref/node36.html#SECTION003620000000000000000)
 
 Sequences: https://www.mellowood.ca/mma/online-docs/html/ref/node5.html#SECTION00510000000000000000
 
