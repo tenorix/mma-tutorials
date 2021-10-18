@@ -144,7 +144,7 @@ Drum Define H1  CH1 * 4
 **\<pattern name\>** whatever name you choose \
 **\<position\>** `1` `1.5` `2` `2.5` `3` `3.5` `4` `4.5` triplets e.g. `4` `4.3` `4.6` \
 **\<duration\>**  `1` `2` `4` `8` `16` combined `4+8` equals `4.`\
-**\<volume\>** MIDI standard volume `80`
+**\<volume\>** standard patterns in the library are based on initial value `90`
 
 ## Bass Pattern
 ```
