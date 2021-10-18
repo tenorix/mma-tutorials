@@ -155,8 +155,8 @@ Bass Define L1 1 2+4 1 90
 **\<pattern name\>** whatever name you choose \
 **\<position\>** `1` `1.5` `2` `2.5` `3` `3.5` `4` `4.5`\
 **\<duration\>**  `1` `2` `4` `8` `16` combined `4+8` equals `4.`\
-**\<offset\>** is an integer giving the offset from the root note, root note `1` third `3` fifth `5`. Octave modifiers: one octave down `5-` one octave up `5+`  \
-**\<volume\>** MIDI standard volume `80`
+**\<offset\>** is an integer giving the offset from the root note, root note `1` third `3` fifth `5`. Octave modifiers: one octave down e.g. `5-` one octave up e.g. `5+`  \
+**\<volume\>** standard patterns in the library are based on initial value `90`
 
 ## Chord Pattern
 ```
@@ -165,7 +165,7 @@ Chord Define C1 1 1 80 ; 2 1 60 ; 3 1 60 ; 4 1 60
 **Simple chord pattern format** per line `Chord Define <pattern name> <position> <volume> ; ... ; ...`  \
 **\<pattern name\>** whatever name you choose \
 **\<position\>** `1` `1.5` `2` `2.5` `3` `3.5` `4` `4.5`\
-**\<volume\>** MIDI standard volume `80`. 
+**\<volume\>** standard patterns in the library are based on initial value `90`
 
 ## Tracks
 ```
