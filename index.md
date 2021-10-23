@@ -20,3 +20,6 @@ Create MIDI karaoke .kar file accompaniments with lyrics - without learning how 
 2. Apply different grooves from a huge library or arrange your own grooves
 3. Run MMA
 4. Your MIDI file is ready to play
+
+# MMA: Different, but beautiful.
+Other apps like Jammer or Band-in-a-box will try to sell you yet another style. With MMA there is no lock-in, all predefined grooves are completely open and can be tweaked according to your needs. Even the generator code! No awkward graphical user interface, but plain text. MMA allows to express backing tracks as text in MMA syntax. So if you know some coding like VBA or Python, this is definitely for you.
