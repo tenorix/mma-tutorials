@@ -1,2 +1,2 @@
 # mma-tutorials
-[Cheatsheets](mma-cheatsheet.md) and tutorials for MMA
+[Cheatsheets](mma-cheatsheet.md) and tutorials for **MMA - Musical MIDI Accompaniment**. MMA is a powerful MIDI accompaniment generator with lots of functionality giving you total control of the generated backing track, so be sure to refer to the [MMA online documentation](https://www.mellowood.ca/mma/online-docs/html/mma.html). MMA is created and maintained at [www.mellowood.ca/mma/](https://www.mellowood.ca/mma/) by Bob van der Poel.
