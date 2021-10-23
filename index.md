@@ -10,10 +10,13 @@ Your pianist just moved to another city? Rehearse with backing tracks that just 
 Rehearse with your own backing tracks created from the chords in your sheet music or from the internet
 
 **Jazz fake books**
-From fake book to backing track in minutes
+From fake book jazz standard to backing track in minutes
 
 **Karaoke**
-Create MIDI karaoke .kar file accompaniments with lyrics - without learning how to play keyboard
+Create MIDI karaoke .kar file accompaniments with lyrics - without learning how to play the keyboard
 
-# MMA - Musical MIDI Accompaniment - the MIDI generator that translates chord notation to MIDI.
-Write down the chords in a text file, apply different grooves from a huge library or arrange your own grooves, run MMA. Your MIDI file is ready to play.
+# MMA - Musical MIDI Accompaniment: the MIDI generator that translates chord notation to MIDI
+1. Enter the chords as text in an editor
+2. Apply different grooves from a huge library or arrange your own grooves
+3. Run MMA
+4. Your MIDI file is ready to play
