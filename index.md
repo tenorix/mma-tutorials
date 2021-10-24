@@ -1,5 +1,7 @@
 # mma-tutorials
-[Cheatsheets](mma-cheatsheet.md) and tutorials for **MMA - Musical MIDI Accompaniment**. MMA is a powerful MIDI accompaniment generator with lots of functionality giving you total control of the generated backing track, so be sure to refer to the [MMA online documentation](https://www.mellowood.ca/mma/online-docs/html/mma.html). MMA is created and maintained at [www.mellowood.ca/mma/](https://www.mellowood.ca/mma/) by Bob van der Poel.
+[Cheatsheet](mma-cheatsheet.md) and tutorials for **MMA - Musical MIDI Accompaniment**. MMA is a powerful MIDI accompaniment generator with lots of functionality giving you total control of the generated backing track. 
+
+MMA is created and maintained at [www.mellowood.ca/mma/](https://www.mellowood.ca/mma/) by Bob van der Poel. Go to his site to download and find out more.  
 
 # Create stunning MIDI backing tracks for free - use the huge groove library or take complete control
 
@@ -21,5 +23,6 @@ Create MIDI karaoke .kar file accompaniments with lyrics - without learning how 
 3. Run MMA
 4. Your MIDI file is ready to play
 
-# MMA: Different, but beautiful.
-Other apps like Jammer or Band-in-a-box will try to sell you yet another style. With MMA there is no lock-in, all predefined grooves are completely open and can be tweaked according to your needs. Even the generator code! No awkward graphical user interface, but plain text. MMA allows to express backing tracks as text in MMA syntax. So if you know some coding like VBA or Python, this is definitely for you.
+# MMA: Making music the open source way  
+* MMA is completely open, there is no proprietary stuff. All predefined grooves can be tweaked according to your needs. Even the MIDI generator written in Python. If you don't like a groove, change it or build your own. 
+* No awkward graphical user interface, but structured text. MMA allows to express backing tracks as text in MMA syntax. So if you know some coding like VBA or Python, this is definitely for you.
